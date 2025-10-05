@@ -1,0 +1,194 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
+All colors MUST be HSL.
+*/
+
+@layer base {
+  :root {
+    /* Deep Space Background */
+    --background: 228 65% 7%;
+    --foreground: 210 40% 98%;
+
+    /* Hero Card */
+    --card: 228 45% 12%;
+    --card-foreground: 210 40% 98%;
+
+    --popover: 228 45% 12%;
+    --popover-foreground: 210 40% 98%;
+
+    /* Tesseract Blue - Primary */
+    --primary: 199 100% 64%;
+    --primary-foreground: 228 65% 7%;
+
+    /* Arc Reactor Glow - Secondary */
+    --secondary: 188 100% 52%;
+    --secondary-foreground: 228 65% 7%;
+
+    /* Subtle highlights */
+    --muted: 228 35% 20%;
+    --muted-foreground: 210 20% 65%;
+
+    /* Metallic accent */
+    --accent: 210 15% 80%;
+    --accent-foreground: 228 65% 7%;
+
+    /* Classified Red */
+    --destructive: 0 85% 60%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 228 35% 20%;
+    --input: 228 35% 20%;
+    --ring: 199 100% 64%;
+
+    --radius: 0.75rem;
+    
+    /* Custom Marvel tokens */
+    --tesseract-glow: 199 100% 64%;
+    --arc-reactor: 188 100% 52%;
+    --gold-medal: 45 100% 51%;
+    --silver-medal: 0 0% 75%;
+    --bronze-medal: 30 65% 45%;
+    --cosmic-dark: 228 65% 7%;
+    --hologram-border: 199 100% 64%;
+    --classified-stamp: 0 85% 60%;
+    
+    /* Gradients */
+    --gradient-cosmic: linear-gradient(135deg, hsl(228 65% 7%) 0%, hsl(228 45% 12%) 50%, hsl(228 65% 7%) 100%);
+    --gradient-tesseract: linear-gradient(135deg, hsl(199 100% 64%) 0%, hsl(188 100% 52%) 100%);
+    --gradient-hologram: linear-gradient(90deg, transparent, hsl(199 100% 64% / 0.3), transparent);
+    
+    /* Shadows & Glows */
+    --glow-tesseract: 0 0 20px hsl(199 100% 64% / 0.5), 0 0 40px hsl(199 100% 64% / 0.3);
+    --glow-repulsor: 0 0 30px hsl(188 100% 52% / 0.6), 0 0 60px hsl(188 100% 52% / 0.4);
+    --shadow-card: 0 8px 32px hsl(228 65% 7% / 0.8);
+    
+    /* Animations */
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-energy: all 0.6s cubic-bezier(0.34, 1.56, 0.64, 1);
+
+    --sidebar-background: 0 0% 98%;
+
+    --sidebar-foreground: 240 5.3% 26.1%;
+
+    --sidebar-primary: 240 5.9% 10%;
+
+    --sidebar-primary-foreground: 0 0% 98%;
+
+    --sidebar-accent: 240 4.8% 95.9%;
+
+    --sidebar-accent-foreground: 240 5.9% 10%;
+
+    --sidebar-border: 220 13% 91%;
+
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .dark {
+    /* Same as light - always dark theme */
+    --background: 228 65% 7%;
+    --foreground: 210 40% 98%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    background: var(--gradient-cosmic);
+    background-attachment: fixed;
+  }
+}
+
+@layer utilities {
+  /* Glow effects */
+  .glow-tesseract {
+    box-shadow: var(--glow-tesseract);
+  }
+  
+  .glow-repulsor {
+    box-shadow: var(--glow-repulsor);
+  }
+  
+  /* Metallic text */
+  .text-metallic {
+    background: linear-gradient(135deg, hsl(var(--accent)), hsl(210 40% 98%));
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  
+  /* Holographic border */
+  .border-hologram {
+    border: 2px solid hsl(var(--hologram-border) / 0.5);
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .border-hologram::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: var(--gradient-hologram);
+    animation: scan 3s linear infinite;
+  }
+  
+  /* Energy burst */
+  @keyframes energy-burst {
+    0% {
+      transform: scale(1);
+      opacity: 1;
+    }
+    50% {
+      transform: scale(1.5);
+      opacity: 0.5;
+    }
+    100% {
+      transform: scale(2);
+      opacity: 0;
+    }
+  }
+  
+  /* Scan lines */
+  @keyframes scan {
+    0% {
+      transform: translateY(-100%);
+    }
+    100% {
+      transform: translateY(100%);
+    }
+  }
+  
+  /* Pulse glow */
+  @keyframes pulse-glow {
+    0%, 100% {
+      box-shadow: 0 0 20px hsl(var(--tesseract-glow) / 0.3);
+    }
+    50% {
+      box-shadow: 0 0 40px hsl(var(--tesseract-glow) / 0.6);
+    }
+  }
+  
+  /* Floating */
+  @keyframes float {
+    0%, 100% {
+      transform: translateY(0px);
+    }
+    50% {
+      transform: translateY(-10px);
+    }
+  }
+  
+  .animate-pulse-glow {
+    animation: pulse-glow 2s ease-in-out infinite;
+  }
+  
+  .animate-float {
+    animation: float 3s ease-in-out infinite;
+  }
+}

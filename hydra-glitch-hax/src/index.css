@@ -1,0 +1,130 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
+All colors MUST be HSL.
+*/
+
+@layer base {
+  :root {
+    --background: 0 0% 7%;
+    --foreground: 0 0% 98%;
+
+    --card: 0 0% 10%;
+    --card-foreground: 0 0% 98%;
+
+    --popover: 0 0% 10%;
+    --popover-foreground: 0 0% 98%;
+
+    --primary: 0 84% 45%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 0 0% 15%;
+    --secondary-foreground: 0 0% 98%;
+
+    --muted: 0 0% 20%;
+    --muted-foreground: 0 0% 60%;
+
+    --accent: 0 100% 50%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 0 20% 20%;
+    --input: 0 20% 20%;
+    --ring: 0 84% 45%;
+
+    --radius: 0.3rem;
+
+    --glitch-red: 0 100% 50%;
+    --glitch-cyan: 180 100% 50%;
+    --glitch-bg: 0 0% 5%;
+    
+    --alert: 0 84% 55%;
+    --warning: 0 100% 65%;
+  }
+  
+  @keyframes glitch {
+    0% {
+      transform: translate(0);
+    }
+    20% {
+      transform: translate(-2px, 2px);
+    }
+    40% {
+      transform: translate(-2px, -2px);
+    }
+    60% {
+      transform: translate(2px, 2px);
+    }
+    80% {
+      transform: translate(2px, -2px);
+    }
+    100% {
+      transform: translate(0);
+    }
+  }
+  
+  @keyframes glitch-text {
+    0% {
+      text-shadow: 0.05em 0 0 hsl(var(--glitch-red)), -0.05em -0.025em 0 hsl(var(--glitch-cyan));
+    }
+    14% {
+      text-shadow: 0.05em 0 0 hsl(var(--glitch-red)), -0.05em -0.025em 0 hsl(var(--glitch-cyan));
+    }
+    15% {
+      text-shadow: -0.05em -0.025em 0 hsl(var(--glitch-red)), 0.025em 0.025em 0 hsl(var(--glitch-cyan));
+    }
+    49% {
+      text-shadow: -0.05em -0.025em 0 hsl(var(--glitch-red)), 0.025em 0.025em 0 hsl(var(--glitch-cyan));
+    }
+    50% {
+      text-shadow: 0.025em 0.05em 0 hsl(var(--glitch-red)), 0.05em 0 0 hsl(var(--glitch-cyan));
+    }
+    99% {
+      text-shadow: 0.025em 0.05em 0 hsl(var(--glitch-red)), 0.05em 0 0 hsl(var(--glitch-cyan));
+    }
+    100% {
+      text-shadow: -0.025em 0 0 hsl(var(--glitch-red)), -0.025em -0.025em 0 hsl(var(--glitch-cyan));
+    }
+  }
+  
+  @keyframes scanline {
+    0% {
+      top: 0;
+    }
+    100% {
+      top: 100%;
+    }
+  }
+  
+  @keyframes pulse-red {
+    0%, 100% {
+      box-shadow: 0 0 20px hsl(var(--alert) / 0.5);
+    }
+    50% {
+      box-shadow: 0 0 40px hsl(var(--alert) / 0.8);
+    }
+  }
+  
+  @keyframes static-noise {
+    0% {
+      background-position: 0 0;
+    }
+    100% {
+      background-position: 100% 100%;
+    }
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+}

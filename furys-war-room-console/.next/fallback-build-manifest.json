@@ -1,0 +1,29 @@
+{
+  "pages": {
+    "/_app": [
+      "static/chunks/[root-of-the-server]__71a20fcf._.js",
+      "static/chunks/39a44_react-dom_4cbe79c6._.js",
+      "static/chunks/39a44_e4c0ced7._.js",
+      "static/chunks/[root-of-the-server]__592a2f6c._.js",
+      "static/chunks/Tesseract_furys-war-room-console_pages__app_5771e187._.js",
+      "static/chunks/Tesseract_furys-war-room-console_pages__app_819f0531._.js"
+    ],
+    "/_error": [
+      "static/chunks/[root-of-the-server]__a7f63a2c._.js",
+      "static/chunks/39a44_react-dom_4cbe79c6._.js",
+      "static/chunks/39a44_e4c0ced7._.js",
+      "static/chunks/[root-of-the-server]__d4bc8efb._.js",
+      "static/chunks/Tesseract_furys-war-room-console_pages__error_5771e187._.js",
+      "static/chunks/Tesseract_furys-war-room-console_pages__error_5303dfce._.js"
+    ]
+  },
+  "devFiles": [],
+  "ampDevFiles": [],
+  "polyfillFiles": [],
+  "lowPriorityFiles": [
+    "static/development/_ssgManifest.js",
+    "static/development/_buildManifest.js"
+  ],
+  "rootMainFiles": [],
+  "ampFirstPages": []
+}

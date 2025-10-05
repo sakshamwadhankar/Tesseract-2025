@@ -1,0 +1,19 @@
+{
+  "devFiles": [],
+  "ampDevFiles": [],
+  "polyfillFiles": [
+    "static/chunks/39a44_next_dist_build_polyfills_polyfill-nomodule.js"
+  ],
+  "lowPriorityFiles": [],
+  "rootMainFiles": [
+    "static/chunks/[turbopack]_browser_dev_hmr-client_hmr-client_ts_390d5c7f._.js",
+    "static/chunks/39a44_next_dist_compiled_ead36dde._.js",
+    "static/chunks/39a44_next_dist_client_89923a16._.js",
+    "static/chunks/39a44_next_dist_8a86e0e5._.js",
+    "static/chunks/39a44_@swc_helpers_cjs_3dafac12._.js",
+    "static/chunks/Tesseract_furys-war-room-console_e69f0d32._.js",
+    "static/chunks/Tesseract_furys-war-room-console_d8e0776a._.js"
+  ],
+  "pages": {},
+  "ampFirstPages": []
+}

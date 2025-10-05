@@ -1,0 +1,18 @@
+{
+  "devFiles": [],
+  "ampDevFiles": [],
+  "polyfillFiles": [],
+  "lowPriorityFiles": [],
+  "rootMainFiles": [],
+  "pages": {
+    "/_error": [
+      "static/chunks/[root-of-the-server]__a7f63a2c._.js",
+      "static/chunks/39a44_react-dom_4cbe79c6._.js",
+      "static/chunks/39a44_e4c0ced7._.js",
+      "static/chunks/[root-of-the-server]__d4bc8efb._.js",
+      "static/chunks/Tesseract_furys-war-room-console_pages__error_5771e187._.js",
+      "static/chunks/Tesseract_furys-war-room-console_pages__error_5303dfce._.js"
+    ]
+  },
+  "ampFirstPages": []
+}
