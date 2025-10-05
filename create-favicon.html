@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Create Favicon</title>
+</head>
+<body>
+    <canvas id="canvas" width="32" height="32" style="border: 1px solid #000; image-rendering: pixelated; width: 128px; height: 128px;"></canvas>
+    <br><br>
+    <button onclick="downloadFavicon()">Download Favicon</button>
+    
+    <script>
+        const canvas = document.getElementById('canvas');
+        const ctx = canvas.getContext('2d');
+        
+        // Create a simple Marvel-themed favicon (Tesseract cube)
+        ctx.fillStyle = '#0ea5e9'; // Marvel blue
+        ctx.fillRect(0, 0, 32, 32);
+        
+        // Draw a simple cube/tesseract pattern
+        ctx.fillStyle = '#1e293b'; // Dark blue
+        ctx.fillRect(4, 4, 24, 24);
+        
+        ctx.fillStyle = '#0ea5e9'; // Light blue
+        ctx.fillRect(8, 8, 16, 16);
+        
+        ctx.fillStyle = '#06b6d4'; // Cyan
+        ctx.fillRect(12, 12, 8, 8);
+        
+        function downloadFavicon() {
+            const link = document.createElement('a');
+            link.download = 'favicon.ico';
+            link.href = canvas.toDataURL('image/x-icon');
+            link.click();
+        }
+    </script>
+</body>
+</html>
